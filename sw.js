@@ -1,4 +1,4 @@
-const CACHE = 'fuelrank-v46';
+const CACHE = 'fuelrank-v47';
 const ASSETS = ['./index.html', './manifest.webmanifest'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
