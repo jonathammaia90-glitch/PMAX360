@@ -1,5 +1,5 @@
-const CACHE = 'fuelrank-v45';
-const ASSETS = ['./index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png', './icons/apple-touch-180.png'];
+const CACHE = 'fuelrank-v46';
+const ASSETS = ['./index.html', './manifest.webmanifest'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
 });
