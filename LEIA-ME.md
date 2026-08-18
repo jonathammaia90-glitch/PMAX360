@@ -41,17 +41,31 @@ As tabelas criadas:
 
 ---
 
-## Etapa 2 — Mudar o cadastro para as tabelas novas
+## Etapa 2 — Copiar os cadastros *(arquivo pronto)*
 
-Eu reescrevo a parte do app que salva postos, contas e equipe. Os lançamentos continuam no formato antigo por enquanto — assim, se algo der errado, dá para voltar sem perder movimento.
+**O que você faz:** mesma coisa da etapa 1, com o arquivo `02-copiar-cadastros.sql`. SQL Editor → New query → colar tudo → Run.
 
-Junto vai um script que **copia os dados de hoje** para as tabelas novas, sem digitação manual.
+No fim aparece uma tabelinha assim:
 
-## Etapa 3 — Mudar os lançamentos
+| tabela | registros |
+| --- | --- |
+| postos | 3 |
+| equipe | 24 |
+| contas | 9 |
 
-A parte que mais pesa. Cada lançamento vira uma linha própria. Aqui somem a lentidão e o risco de sobrescrita.
+Confira se os números batem com o que você vê no app (quantos postos, quantos frentistas somando todos, quantos acessos). Se bater, a cópia deu certo.
 
-Depois disso, aperto as regras de acesso: cada gerente passa a enxergar só o posto dele, cada frentista só os próprios números.
+**O que isso faz:** lê os dados que já estão no app e preenche as tabelas novas. **Não apaga nada** e **não muda o app** — ele continua lendo do bloco antigo. Pode rodar de novo depois de cadastrar mais gente; atualiza em vez de duplicar.
+
+Os lançamentos e o fechamento de loja ficam para a etapa 3, junto com a mudança no app — assim, se algo der errado, nenhum movimento se perde.
+
+## Etapa 3 — Mudar o app para as tabelas novas
+
+Aqui eu mexo no app: ele passa a ler e gravar nas tabelas em vez do bloco único, e cada lançamento vira uma linha própria. É onde somem a lentidão e o risco de um gerente apagar o lançamento do outro.
+
+Junto vai o script que copia os lançamentos e o fechamento de loja, e o aperto nas regras de acesso: cada gerente enxerga só o posto dele, cada frentista só os próprios números.
+
+Você recebe um `index.html` novo para subir, como sempre.
 
 ## Etapa 4 — Desligar o bloco antigo
 
