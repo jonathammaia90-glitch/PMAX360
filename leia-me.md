@@ -34,17 +34,22 @@ O mural é somente leitura: ele nunca grava, apenas recebe. O selo no canto supe
 
 Este mesmo `index.html` empacota com Capacitor (`npx cap init`, `npx cap add android/ios`) e vira AAB para a Play Store e IPA para a App Store. Exige contas de desenvolvedor (Google, US$ 25 único; Apple, US$ 99/ano) e revisão. O ícone 1024px para a ficha da App Store está em `icons/icon-1024.png`.
 
-## Os endereços
+## Os endereços definitivos
 
-Publicado no GitHub Pages a partir de `jonathammaia90-glitch/fuelrank-app`, branch `main`, pasta `/ (root)`:
+Publicado em GitHub Pages a partir de `jonathammaia90-glitch/fuelrank-app`, branch `main`, pasta `/ (root)`. Todos os endereços leem e gravam no mesmo banco.
 
-- **App instalável (celular)** — https://jonathammaia90-glitch.github.io/fuelrank-app/
-- **Painel web (desktop)** — https://jonathammaia90-glitch.github.io/fuelrank-app/web/
-- **Mural do posto (tablet ou TV, sem login)** — https://jonathammaia90-glitch.github.io/fuelrank-app/web/#mural
-- **Mural de um posto específico** — https://jonathammaia90-glitch.github.io/fuelrank-app/web/#mural=ID_DO_POSTO
+| Para quem | Endereço |
+| --- | --- |
+| App instalável — proprietário, administrador, gerente e frentista | https://jonathammaia90-glitch.github.io/fuelrank-app/ |
+| Mural do posto — tablet ou TV, sem login | https://jonathammaia90-glitch.github.io/fuelrank-app/#mural |
+| Mural de um posto específico | https://jonathammaia90-glitch.github.io/fuelrank-app/#mural=ID_DO_POSTO |
 
-O ID do posto aparece no cadastro do posto. Sem o ID, o mural abre o primeiro posto da rede. Deixe o tablet nesse endereço em tela cheia; ele se atualiza sozinho.
+O mesmo `index.html` atende celular, tablet e desktop — não existe endereço separado para web. O ID do posto aparece no cadastro do posto; sem ID o mural abre o primeiro da rede.
 
-O `.nojekyll` na raiz impede o Jekyll de processar os arquivos. Ao publicar uma versão nova, incremente `CACHE` em `sw.js` para o PWA baixar a atualização; o service worker ignora o que está em `/web/`.
+## Atualização
+
+O app verifica versão nova a cada minuto e sempre que volta para a frente. Encontrando, baixa e recarrega sozinho — sem apagar nem reinstalar. Se houver formulário aberto, ele espera a tela ficar livre, e o rascunho fica salvo no aparelho.
+
+Ao publicar uma versão nova, incremente `CACHE` em `sw.js`. É isso que dispara a atualização em todos os aparelhos.
 
 A interface segue o design system Nocturne — cores, tipografia, raios e sombras vêm dos seus tokens, já embutidos nos arquivos.
