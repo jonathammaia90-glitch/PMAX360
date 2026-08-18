@@ -24,20 +24,26 @@ Entre como proprietário: **dono@fuelrank.app**, senha **123456**. Na aba Admins
 
 Troque a senha do proprietário pelo fluxo "Esqueci minha senha" antes de distribuir o app.
 
-## Limite importante
+## Sincronização
 
-Os dados ficam salvos no próprio aparelho e sobrevivem a fechar o app, mas não são compartilhados: o lançamento feito no celular do gerente não aparece no do frentista. Para a rede operar de verdade é preciso backend com login e banco de dados.
+Todos os aparelhos leem e gravam no mesmo banco. O lançamento do gerente aparece no celular do frentista e no mural em até 20 segundos. Sem internet o app continua funcionando com o último dado recebido e reenvia sozinho ao reconectar.
+
+O mural é somente leitura: ele nunca grava, apenas recebe. O selo no canto superior mostra `ATUALIZADO hh:mm`, `SEM CONEXÃO` ou `CONECTANDO…`.
 
 ## Caminho para as lojas
 
 Este mesmo `index.html` empacota com Capacitor (`npx cap init`, `npx cap add android/ios`) e vira AAB para a Play Store e IPA para a App Store. Exige contas de desenvolvedor (Google, US$ 25 único; Apple, US$ 99/ano) e revisão. O ícone 1024px para a ficha da App Store está em `icons/icon-1024.png`.
 
-## Os dois endereços
+## Os endereços
 
-Depois de publicar no GitHub Pages (Settings → Pages → branch `main`, pasta `/ (root)`):
+Publicado no GitHub Pages a partir de `jonathammaia90-glitch/fuelrank-app`, branch `main`, pasta `/ (root)`:
 
-- `https://<usuario>.github.io/<repo>/` — app mobile instalável (este `index.html`)
-- `https://<usuario>.github.io/<repo>/web/` — painel web para desktop
+- **App instalável (celular)** — https://jonathammaia90-glitch.github.io/fuelrank-app/
+- **Painel web (desktop)** — https://jonathammaia90-glitch.github.io/fuelrank-app/web/
+- **Mural do posto (tablet ou TV, sem login)** — https://jonathammaia90-glitch.github.io/fuelrank-app/web/#mural
+- **Mural de um posto específico** — https://jonathammaia90-glitch.github.io/fuelrank-app/web/#mural=ID_DO_POSTO
+
+O ID do posto aparece no cadastro do posto. Sem o ID, o mural abre o primeiro posto da rede. Deixe o tablet nesse endereço em tela cheia; ele se atualiza sozinho.
 
 O `.nojekyll` na raiz impede o Jekyll de processar os arquivos. Ao publicar uma versão nova, incremente `CACHE` em `sw.js` para o PWA baixar a atualização; o service worker ignora o que está em `/web/`.
 
