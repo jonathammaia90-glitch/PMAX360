@@ -51,6 +51,15 @@ No celular o botão usa o esquema nativo do WhatsApp (`whatsapp://send`), que é
 mais confiável dentro do app instalado; no computador usa `wa.me`. Nos dois
 casos o texto é copiado ao clicar, então o botão "Copiar texto" é reserva.
 
+## Corrige o "atualizar sem fim"
+Os pacotes v88 e v89 tinham `var VERSAO = '87'` dentro do `index.html` e `90` no
+`versao.json`. O app comparava os dois, achava que havia versão nova e pedia
+atualização para sempre. Aqui os dois estão em **90**.
+
+**Ao gerar qualquer pacote novo:** o `var VERSAO` no topo do index e o número do
+`versao.json` têm que ser o mesmo. Se o index ficar atrás, o pedido de
+atualização nunca para.
+
 ## Correções do empacotamento aplicadas aqui
 O `index.html` gerado vem com `<title>Bundled Page</title>`, fundo claro na tela
 de carregamento e sem as tags de PWA no `<head>`. Corrigidos à mão neste pacote.
