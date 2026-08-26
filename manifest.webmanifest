@@ -1,9 +1,9 @@
 {
-  "id": "/PMAX360/?v=92",
+  "id": "/PMAX360/?v=93",
   "name": "PMAX360",
   "short_name": "PMAX360",
   "description": "Performance que move resultados: metas, validações e ranking da equipe.",
-  "start_url": "./index.html?v=92",
+  "start_url": "./index.html?v=93",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
@@ -12,19 +12,19 @@
   "lang": "pt-BR",
   "icons": [
     {
-      "src": "./icon-192.png?v=92",
+      "src": "./icon-192.png?v=93",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./icon-512.png?v=92",
+      "src": "./icon-512.png?v=93",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./maskable-512.png?v=92",
+      "src": "./maskable-512.png?v=93",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
