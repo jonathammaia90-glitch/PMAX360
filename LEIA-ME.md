@@ -1,6 +1,16 @@
-# PMAX360 · v95 — como publicar
+# PMAX360 · v96 — como publicar
 
-Substitui o v91 ao v94. Publique só este.
+Substitui o v91 ao v95. Publique só este.
+
+## Correções do v96
+- **Cinco grupos da loja não apareciam na aba Loja.** CERVEJAS, BALAS E DOCES,
+  SNACKS E BISCOITOS, DROPS E PASTILHAS e SUCOS E ISOTONICOS não estavam na
+  lista de subgrupos do posto, então R$ 12,7 mil do mês ficavam fora da quebra
+  por subgrupo (o total do dia estava certo, mas as linhas não somavam o dia).
+  Os cinco já foram cadastrados no banco — nada a fazer.
+- **A aba Produtos não explicava por que o bloco da loja estava vazio.** Agora,
+  enquanto o `15-produtos-loja.sql` não for rodado, aparece um aviso dizendo o
+  que falta.
 
 ## Novo no v95 — troca de óleo refeita pelo relatório
 As trocas de 08/2026 foram reconstruídas a partir do relatório de vendas
@@ -73,7 +83,7 @@ Repositório: `jonathammaia90-glitch/PMAX360`, branch `main`. Copie para a **rai
 - `index.html`, `sw.js`, `versao.json`, `manifest.webmanifest`
 - `icon-192.png`, `icon-512.png`, `maskable-512.png`, `apple-touch-180.png`
 
-Commit → "PMAX360 v95" → Push origin.
+Commit → "PMAX360 v96" → Push origin.
 
 ## 2. Supabase — rode `15-produtos-loja.sql`
 **Este é obrigatório para o bloco da loja aparecer.** Ele cria a coluna
@@ -82,7 +92,7 @@ Commit → "PMAX360 v95" → Push origin.
 Opcional: `12-papel-trocador.sql` (libera o papel `Trocador` no banco).
 
 ## 3. Conferir
-Abra o app, toque em **Atualizar** e confira `v95` no rodapé.
+Abra o app, toque em **Atualizar** e confira `v96` no rodapé.
 
 - **Troca de óleo** → o ranking com as puxadas marcadas.
 - **Produtos** → o bloco PRODUTO DA LOJA com os três botões.
@@ -90,6 +100,7 @@ Abra o app, toque em **Atualizar** e confira `v95` no rodapé.
 - **Equipe** → litros, mix, carros e automotivo de cada frentista no mês.
 
 ## Correções que vieram nas versões anteriores
+- **v95** — trocas de óleo refeitas pelo relatório, com troca puxada.
 - **v94** — bloco de produtos da loja e os dados de 01 a 26/08 no banco.
 - **v93** — o botão do catálogo Tecfil aponta para `catalogo.tecfil.com.br`
   (busca por placa); o endereço antigo saiu do ar.
