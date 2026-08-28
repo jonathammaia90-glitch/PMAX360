@@ -1,54 +1,39 @@
-# PMAX360 · v100 — como publicar
+# PMAX360 · v101 — como publicar
 
-Substitui o v91 ao v99. Publique só este.
+Substitui todos os pacotes anteriores. Publique só este.
 
-## O que mudou: carros abastecidos e cadastros no app não somem mais
+## O que mudou no v101
 
-Era a importação do relatório de litros. No modo **Substituir** ela apagava os
-dias lançados e regravava o mês só com os números do relatório — e como o
-relatório não traz carros nem cadastros no app, esses dois campos iam a zero.
+**Venda automotiva: trocador compete com trocador, frentista com frentista.**
+A venda de pista é menor por natureza, então misturar os dois num ranking só
+comparava coisas diferentes. Agora o bloco VENDA AUTOMOTIVA POR PESSOA (abas
+Produtos e Equipe) vem em duas faixas — TROCADORES DE ÓLEO e FRENTISTAS — com
+posição, participação e a marca de maior venda calculadas dentro do grupo.
 
-Corrigido:
+**Volume, aditivada, mix, carros e cadastros no app continuam com todos juntos**
+num ranking único.
 
-- a importação **nunca escreve** em carros abastecidos nem em cadastros no app;
-- no modo Substituir, o total que a pessoa já tinha nesses dois campos é
-  guardado antes dos dias saírem, então nada se perde junto com os dias;
-- a coluna CARROS saiu da prévia da importação, e o aviso na tela agora diz que
-  os dois campos são contagem da casa;
-- o resto continua igual: volume, comum, aditivada, etanol, diesel e mix seguem
-  vindo do relatório.
+**Mural do posto:**
+- quadro novo VENDA AUTOMOTIVA, com as duas faixas e só o total de cada pessoa;
+- o destaque da equipe e os "melhor em" passam a sair de volume, aditivada, mix,
+  carros e app — sem o automotivo, que tem o quadro próprio;
+- quem é da troca de óleo aparece marcado com ÓLEO ao lado do nome;
+- o card de projeção de fechamento saiu.
 
-## Para trazer de volta o que já sumiu
-
-Arquivo **16-recuperar-carros-app.sql**, incluído nesta pasta.
-
-1. App fechado em todos os aparelhos.
-2. SQL Editor do Supabase → cole e rode a **PARTE A** (só olha). Se a A2 mostrar
-   linhas com `com_carros` ou `com_app` maiores que zero, o backup tem os dias
-   e a recuperação funciona.
-3. Rode a **PARTE B**. Ela grava só carros e app, e só onde o valor atual está
-   vazio ou zero. Nada é apagado.
-4. Rode a **PARTE C** para conferir.
-5. Cada pessoa abre o app uma vez com internet.
-
-Se a PARTE A vier vazia, o backup não tem os dias e o caminho é relançar à mão.
+**Do v100, que segue valendo:** a importação do relatório de litros não escreve
+mais em carros abastecidos nem em cadastros no app, e no modo Substituir o total
+já lançado nesses dois campos é preservado.
 
 ## Como publicar
 
-Suba **o conteúdo desta pasta** para a raiz do site, por cima do que está lá:
+Suba o conteúdo desta pasta na raiz do site, por cima do que está lá:
 
 - `index.html` — o app inteiro
 - `sw.js`, `versao.json`, `manifest.webmanifest`
 - `icon-192.png`, `icon-512.png`, `maskable-512.png`, `apple-touch-180.png`
 
-Os `.sql` são só para você rodar no Supabase; não precisam subir.
-
-Ninguém reinstala nada. Quem estiver com o app aberto vê o aviso de versão nova
+Ninguém reinstala nada: quem estiver com o app aberto vê o aviso de versão nova
 e toca em Atualizar.
 
-## Os outros SQL da pasta
-
-- `12-papel-trocador.sql` — papel de trocador na equipe (já rodado, se foi o caso)
-- `15-produtos-loja.sql` — produtos da loja (já rodado, se foi o caso)
-
-Rodar de novo não faz mal: os dois são feitos para poder repetir.
+O `16-recuperar-carros-app.sql` é só para rodar no Supabase, se ainda precisar
+devolver carros e app de dias antigos. Não precisa subir.
