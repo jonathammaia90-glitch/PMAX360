@@ -1,4 +1,4 @@
-const CACHE = 'pmax360-v96';
+const CACHE = 'pmax360-v100';
 const ASSETS = ['./manifest.webmanifest', './icon-192.png', './icon-512.png', './maskable-512.png', './apple-touch-180.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => Promise.all(ASSETS.map(a => c.add(a).catch(() => {})))).then(() => self.skipWaiting()));
