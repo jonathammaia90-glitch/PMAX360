@@ -1,28 +1,28 @@
-# PMAX360 · v101 — como publicar
+# PMAX360 · v105 — como publicar
 
 Substitui todos os pacotes anteriores. Publique só este.
 
-## O que mudou no v101
+## O que mudou no v105
 
-**Venda automotiva: trocador compete com trocador, frentista com frentista.**
-A venda de pista é menor por natureza, então misturar os dois num ranking só
-comparava coisas diferentes. Agora o bloco VENDA AUTOMOTIVA POR PESSOA (abas
-Produtos e Equipe) vem em duas faixas — TROCADORES DE ÓLEO e FRENTISTAS — com
-posição, participação e a marca de maior venda calculadas dentro do grupo.
+**Aba "Fechar mês".** O fechamento do mês saiu de dentro do painel e virou aba
+própria do gerente, entre Carros e Histórico. Abre direto na tela de
+confirmação em dois toques; ao fechar, o app já cai na aba Importar para você
+subir os relatórios do mês novo.
 
-**Volume, aditivada, mix, carros e cadastros no app continuam com todos juntos**
-num ranking único.
+**O fechamento passou a guardar o mês inteiro.** Antes ia para o histórico só o
+resumo. Agora vai: metas vigentes do mês, volume, mix, litros de gasolina
+comum, aditivada, etanol e diesel, carros, automotivo, cadastros no app,
+venda/custo/lucro da loja com o dia a dia, subgrupos, trocas de óleo com
+faturamento, preços e custo da NF, e a equipe com função, turno, dias lançados
+e todos os indicadores de cada pessoa.
 
-**Mural do posto:**
-- quadro novo VENDA AUTOMOTIVA, com as duas faixas e só o total de cada pessoa;
-- o destaque da equipe e os "melhor em" passam a sair de volume, aditivada, mix,
-  carros e app — sem o automotivo, que tem o quadro próprio;
-- quem é da troca de óleo aparece marcado com ÓLEO ao lado do nome;
-- o card de projeção de fechamento saiu.
+**Histórico: botão "Ver o mês" em cada linha.** Abre a leitura completa do mês
+fechado — cards de realizado vs meta com atingimento, venda por subgrupo da
+loja, como cada frentista fechou e a tabela dia a dia da loja. Só leitura, com
+"← Voltar ao histórico".
 
-**Do v100, que segue valendo:** a importação do relatório de litros não escreve
-mais em carros abastecidos nem em cadastros no app, e no modo Substituir o total
-já lançado nesses dois campos é preservado.
+Meses fechados antes desta versão não têm metas nem dia a dia gravados: a tela
+mostra os totais que existem e avisa na tabela de dias.
 
 ## Como publicar
 
@@ -34,6 +34,3 @@ Suba o conteúdo desta pasta na raiz do site, por cima do que está lá:
 
 Ninguém reinstala nada: quem estiver com o app aberto vê o aviso de versão nova
 e toca em Atualizar.
-
-O `16-recuperar-carros-app.sql` é só para rodar no Supabase, se ainda precisar
-devolver carros e app de dias antigos. Não precisa subir.
