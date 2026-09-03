@@ -1,11 +1,25 @@
-# PMAX360 · v107 — como publicar
+# PMAX360 · v108 — como publicar
 
 Substitui todos os pacotes anteriores. Publique só este.
 
-## O que mudou no v107
+## O que mudou no v108
 
-Corrigido o mês inicial do posto de demonstração, que estava fixo em 08/2026
-(agosto) — agora começa em 09/2026 (setembro), acompanhando o mês corrente.
+**Lucro por combustível.** Nova leitura na aba Pricing: margem por litro ×
+litros vendidos de cada combustível (comum, aditivada, etanol, diesel S10),
+comparando o mês atual com o mês anterior fechado.
+
+**Melhor produto por frentista.** A tabela de lançamento da equipe agora tem a
+coluna "Melhor produto", com o item automotivo que cada um mais vende (vem do
+relatório de vendas por vendedor importado).
+
+**Histórico com lucro total.** A aba Histórico e a tela "Ver o mês" agora
+separam margem de combustível e lucro de loja, somando os dois num lucro
+total — incluindo média diária de combustível e lucro por produto de
+combustível no mês fechado.
+
+## Vem do v107
+
+Corrigido o mês inicial do posto de demonstração, que estava fixo em 08/2026.
 
 ## Como publicar
 
