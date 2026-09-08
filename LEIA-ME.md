@@ -1,25 +1,29 @@
-# PMAX360 · v108 — como publicar
+# PMAX360 · v109 — como publicar
 
 Substitui todos os pacotes anteriores. Publique só este.
 
-## O que mudou no v108
+## O que mudou no v109
 
-**Lucro por combustível.** Nova leitura na aba Pricing: margem por litro ×
-litros vendidos de cada combustível (comum, aditivada, etanol, diesel S10),
-comparando o mês atual com o mês anterior fechado.
+**Marca renomeada.** Removidas todas as referências a "FuelRank" que
+restavam no app (e-mails de exemplo, chave de armazenamento local) — tudo
+agora usa "pmax360". Dados salvos de quem já usa o app continuam sendo lidos
+normalmente.
 
-**Melhor produto por frentista.** A tabela de lançamento da equipe agora tem a
-coluna "Melhor produto", com o item automotivo que cada um mais vende (vem do
-relatório de vendas por vendedor importado).
+**Ranking do Painel corrigido.** O gráfico "Ranking da equipe" comparava
+atingimento sem tratar frentista sem lançamento no mês, o que bagunçava a
+ordem. Agora ordena certo, do maior para o menor.
 
-**Histórico com lucro total.** A aba Histórico e a tela "Ver o mês" agora
-separam margem de combustível e lucro de loja, somando os dois num lucro
-total — incluindo média diária de combustível e lucro por produto de
-combustível no mês fechado.
+**"Melhor em" corrigido.** Os destaques do mural comparavam o atingimento
+(%) de cada indicador em vez do valor bruto vendido, então às vezes mostravam
+o frentista errado como líder. Agora cada indicador (volume, mix, aditivada,
+carros, app) mostra quem realmente vendeu mais naquele indicador — igual à
+tabela.
 
-## Vem do v107
+## Vem do v108
 
-Corrigido o mês inicial do posto de demonstração, que estava fixo em 08/2026.
+Lucro por combustível na aba Pricing, melhor produto por frentista na tabela
+da equipe, lucro total (combustível + loja) no Histórico e na tela "Ver o
+mês".
 
 ## Como publicar
 
