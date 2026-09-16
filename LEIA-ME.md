@@ -1,17 +1,12 @@
-# PMAX360 · v113 — como publicar
+# PMAX360 · v114 — como publicar
 
 Substitui todos os pacotes anteriores. Publique só este.
 
-## O que mudou no v113
+## O que mudou no v114
 
-Ranking (Mural e Painel) corrigido: o % de atingimento não conta mais a
-venda de produtos automotivos na média — quem faz troca de óleo vende muito
-mais automotivo por natureza da função, e isso inflava o ranking dele frente
-aos frentistas de pista. O % agora recalcula na tela (Mural e Painel), sem
-precisar relançar dados antigos.
-
-Desempate do ranking, em ordem: % de atingimento → volume → aditivada →
-carros → só por último, a venda automotiva.
+Nota explicativa adicionada no Mural, acima da tabela de desempenho:
+descreve como o % de atingimento é calculado e a ordem de desempate
+(volume → aditivada → carros → automotiva por último).
 
 ## Como publicar
 
