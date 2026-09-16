@@ -1,12 +1,17 @@
-# PMAX360 · v112 — como publicar
+# PMAX360 · v113 — como publicar
 
 Substitui todos os pacotes anteriores. Publique só este.
 
-## O que mudou no v112
+## O que mudou no v113
 
-Mural: colunas COMUM, ETANOL e DIESEL adicionadas na tabela "Desempenho de
-cada frentista", entre ADITIVADA e VOLUME (tabela larga e cartões em tela
-estreita).
+Ranking (Mural e Painel) corrigido: o % de atingimento não conta mais a
+venda de produtos automotivos na média — quem faz troca de óleo vende muito
+mais automotivo por natureza da função, e isso inflava o ranking dele frente
+aos frentistas de pista. O % agora recalcula na tela (Mural e Painel), sem
+precisar relançar dados antigos.
+
+Desempate do ranking, em ordem: % de atingimento → volume → aditivada →
+carros → só por último, a venda automotiva.
 
 ## Como publicar
 
